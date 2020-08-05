@@ -6,9 +6,9 @@ function giveCompliment(name) {
       "strong", "amazing", "funny", "nice",
       "great father"];
   let randomIndex = Math.floor((Math.random() * compliments.length));
-  console.log(`"You are ${compliments[randomIndex]}, ${name}!"`);
+  return `"You are ${compliments[randomIndex]}, ${name}!"`;
 }
 
-giveCompliment("Rezan")
-giveCompliment("Rezan")
-giveCompliment("Rezan")
+console.log(giveCompliment("Rezan"));
+console.log(giveCompliment("Rezan"));
+console.log(giveCompliment("Rezan"));

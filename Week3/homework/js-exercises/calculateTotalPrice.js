@@ -11,7 +11,7 @@ const cartForParty = {
 function calculateTotalPrice(object) {
   let totalPrice = 0;
   for (const item in object) totalPrice += object[item];
-  console.log(`Total: ${totalPrice.toFixed(2)}`);
+  return `Total: ${totalPrice.toFixed(2)}`;
 };
 
-calculateTotalPrice(cartForParty);
+console.log(calculateTotalPrice(cartForParty));

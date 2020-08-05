@@ -20,22 +20,22 @@ function validateCreditNumber(numbers) {
 
     checkCharactersSum = charactersArray.reduce((a, b) => parseInt(a) + parseInt(b), 0)
     if (checkifSameCharacters.length === charactersArray.length)
-      console.log(`Invalid! The input ${numbers} should contain at least 2 different types of numbers!`);
+      return `Invalid! The input ${numbers} should contain at least 2 different types of numbers!`;
     else if (checkIfNumber.length === 1)
-      console.log(`Invalid! The input ${numbers} should contain only numbers!`);
+       return `Invalid! The input ${numbers} should contain only numbers!`;
     else if (charactersArray[charactersArray.length - 1] % 2 !== 0)
-      console.log(`Invalid! The last number of the input ${numbers} is odd, the last number should be even`);
+       return `Invalid! The last number of the input ${numbers} is odd, the last number should be even`;
     else if (checkCharactersSum <= 16)
-      console.log(`Invalid! The sum of the input ${numbers} must be greater than 16`);
+       return `Invalid! The sum of the input ${numbers} must be greater than 16`;
     else
-      console.log(`Success! The input ${numbers} is a valid credit card number!`);
+       return `Success! The input ${numbers} is a valid credit card number!`;
 
-  } else console.log("The input most be 16 characters");
+  } else  return "The input most be 16 characters";
 }
 
-validateCreditNumber("9999777788880000"); //Valid.
-validateCreditNumber("6666666666661666"); //Valid.
-validateCreditNumber("a92332119c011112"); //Invalid characters.
-validateCreditNumber("4444444444444444"); //Invalid: only one type of number.
-validateCreditNumber("1111111111111110"); //Invalid: sum less than 16.
-validateCreditNumber("6666666666666661"); //Invalid: the last number is odd.
+console.log(validateCreditNumber("9999777788880000")); //Valid.
+console.log(validateCreditNumber("6666666666661666")); //Valid.
+console.log(validateCreditNumber("a92332119c011112")); //Invalid characters.
+console.log(validateCreditNumber("4444444444444444")); //Invalid: only one type of number.
+console.log(validateCreditNumber("1111111111111110")); //Invalid: sum less than 16.
+console.log(validateCreditNumber("6666666666666661")); //Invalid: the last number is odd.

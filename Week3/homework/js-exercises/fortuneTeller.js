@@ -11,9 +11,9 @@ function tellFortune(numChildren, partnerNames, locations, jobs){
     const partnerName = partnerNames[randomIndex];
     const location = locations[randomIndex];
     const job = jobs[randomIndex];
-    console.log(`You will be a ${job} in ${location}, married to ${partnerName} with ${numkids} kids.`)
+    return `You will be a ${job} in ${location}, married to ${partnerName} with ${numkids} kids.`;
 }
 
-tellFortune(numChildren, partnerNames, locations, jobs);
-tellFortune(numChildren, partnerNames, locations, jobs);
-tellFortune(numChildren, partnerNames, locations, jobs);
+console.log(tellFortune(numChildren, partnerNames, locations, jobs));
+console.log(tellFortune(numChildren, partnerNames, locations, jobs));
+console.log(tellFortune(numChildren, partnerNames, locations, jobs));
